@@ -151,21 +151,6 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <!-- <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">{{ Auth::user()->name }} <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href={{ route('profile.show') }}>Profile</a>
-                            </li>
-                            <li>
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-                                    <input class="" type="submit" value="Logout">
-                                </form>
-                            </li>
-                        </ul> -->
-
-
-
                     <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                         <div class="navbar-profile">
                             <p class="mb-0 d-none d-sm-block navbar-profile-name">{{ Auth::user()->name }}</p>
@@ -173,7 +158,7 @@
                         </div>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="profileDropdown">                    
-                        <a class="dropdown-item preview-item" href={{ route('profile.show') }}>
+                        <a class="dropdown-item preview-item" href="{{ route('profile.show') }}">
                             <div class="preview-thumbnail">
                                 <div class="preview-icon bg-dark rounded-circle">
                                     <i class="mdi mdi-account text-success"></i>

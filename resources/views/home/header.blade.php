@@ -38,7 +38,7 @@
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">{{ Auth::user()->name }} <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href={{ route('profile.show') }}>Profile</a>
+                                <a href="{{ route('profile.show') }}">Profile</a>
                             </li>
                             <li>
                                 <form method="POST" action="{{ route('logout') }}">
