@@ -6,7 +6,7 @@
     @include('admin.css')
 
     <style>
-        .img-size{
+        .img-size {
             width: 200px !important;
             height: 200px !important;
             border-radius: 12px !important;
@@ -20,10 +20,18 @@
         @include('admin.sidebar')
         <!-- partial -->
         @include('admin.header')
-        
+
         <!-- partial -->
         <div class="main-panel">
             <div class="content-wrapper">
+                @if(session()->has('message'))
+
+                <div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                    {{session()->get('message')}}
+                </div>
+
+                @endif
                 <div class="row ">
                     <div class="col-12 grid-margin">
                         <div class="card">
@@ -41,6 +49,8 @@
                                                 <th> Price </th>
                                                 <th> Discount Price </th>
                                                 <th> Product Image </th>
+                                                <th> Edit </th>
+                                                <th> Delete </th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -56,6 +66,12 @@
                                                 <td>
                                                     <img class="img-size" src="/product/{{ $product->image }}" alt="">
                                                 </td>
+                                                <td>
+                                                    <a onclick="" class="btn btn-warning" href="{{ url('update_product', $product->id) }}">Edit</a>
+                                                </td>
+                                                <td>
+                                                    <a onclick="return confirm('Are you sure to delete this?')" class="btn btn-danger" href="{{ url('delete_product', $product->id) }}">Delete</a>
+                                                </td>
                                             </tr>
                                             @endforeach
                                         </tbody>
@@ -67,7 +83,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- container-scroller -->
         <!-- plugins:js -->
         @include('admin.script')
