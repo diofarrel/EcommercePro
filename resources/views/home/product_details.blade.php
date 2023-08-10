@@ -47,7 +47,16 @@
                             @else
                             <h2>IDR. {{ $product->price }}</h2>
                             @endif
-                            <a style="margin-top: 5rem;" href="">Shop Now</a>
+                            
+                            <form style="margin-top: 3rem;" action="{{ url('add_cart', $product->id) }}" method="POST">
+                                @csrf
+                                <div>
+                                    <label for="quantity">Add Quantity</label>
+                                    <input type="number" name="quantity" value="1" min="1">
+                                    <input type="submit" value="Add to Cart" style="float: left;">
+                                </div>
+                            </form>
+                            <!-- <a style="margin-top: 5rem;" href="">Shop Now</a> -->
                         </div>
                     </div>
                 </div>

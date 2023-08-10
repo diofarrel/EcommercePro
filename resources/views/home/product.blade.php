@@ -14,9 +14,10 @@
                             <a href="{{ url('product_details', $products->id) }}" class="option1">
                                 Product Details
                             </a>
-                            <a href="" class="option2">
+                            <!-- <a href="" class="option2">
                                 Buy Now
-                            </a>
+                            </a> -->
+                            
                         </div>
                     </div>
                     <div class="img-box">
