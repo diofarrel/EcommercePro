@@ -28,6 +28,22 @@
             height: 200px !important;
             border-radius: 12px !important;
         }
+
+        .btn-box a {
+            display: inline-block;
+            padding: 10px 45px;
+            background-color: #f7444e;
+            border: 1px solid #f7444e;
+            color: #ffffff;
+            border-radius: 0;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        .btn-box a:hover {
+            background-color: transparent;
+            color: #f7444e;
+        }
     </style>
 </head>
 
@@ -36,6 +52,15 @@
         <!-- header section strats -->
         @include('home.header')
         <!-- end header section -->
+
+        @if(session()->has('message'))
+
+        <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+            {{session()->get('message')}}
+        </div>
+
+        @endif
 
         <div class="table-responsive" style="margin:auto; width:80%;">
             <table class="table" style="margin-top: 2rem; margin-bottom: 2rem;">
@@ -55,8 +80,8 @@
                         <td> {{ $cart->product_title }} </td>
                         <td> {{ $cart->quantity }} </td>
                         <td> {{ $cart->price }} </td>
-                        <td> 
-                            <img class="img-fluid img-thumbnail img-size" src="/product/{{ $cart->image }}" alt=""> 
+                        <td>
+                            <img class="img-fluid img-thumbnail img-size" src="/product/{{ $cart->image }}" alt="">
                         </td>
                         <td>
                             <a onclick="return confirm('Are you sure to delete this?')" class="btn btn-danger" href="{{ url('/remove_cart', $cart->id) }}">Delete Item</a>
@@ -78,7 +103,11 @@
                             <input type="number" placeholder="" name="total_price" value="{{ $totalprice }}" disabled />
                         </div>
                         <div class="field" style="margin-bottom: 5rem; float: left">
-                            <input type="submit" value="Checkout Sekarang" />
+                            <div class="btn-box">
+                                <a href=" {{ url('checkout') }} " class="btn1">
+                                    Checkout Sekarang
+                                </a>
+                            </div>
                         </div>
                     </fieldset>
                 </form>

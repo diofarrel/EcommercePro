@@ -54,3 +54,5 @@ Route::post('/add_cart/{id}', [HomeController::class, 'add_cart']);
 Route::get('/show_cart', [HomeController::class, 'show_cart']);
 
 Route::get('/remove_cart/{id}', [HomeController::class, 'remove_cart']);
+
+Route::get('/checkout', [HomeController::class, 'checkout']);
