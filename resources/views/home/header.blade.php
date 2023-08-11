@@ -7,7 +7,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="{{url('/')}}">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <!-- <li class="nav-item dropdown">
@@ -18,7 +18,7 @@
                         </ul>
                     </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="product.html">Products</a>
+                        <a class="nav-link" href="{{ url('productpage') }}">Products</a>
                     </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="blog_list.html">Blog</a>

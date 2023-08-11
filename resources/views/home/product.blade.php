@@ -40,11 +40,10 @@
                 </div>
             </div>
             @endforeach
-
-            <span style="padding: 25px;">
-                {!!$product->links()!!}
-            </span>
         </div>
+        <span style="padding: 25px;">
+            {!!$product->links()!!}
+        </span>
         <!-- <div class="btn-box">
             <a href="">
                 View All products

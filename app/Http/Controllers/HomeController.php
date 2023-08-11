@@ -134,4 +134,10 @@ class HomeController extends Controller
         }
         return redirect()->back()->with('message', 'We Received your Order!');
     }
+
+    public function productpage()
+    {
+        $product = Product::paginate(6);
+        return view('home.productpage', compact('product'));    
+    }
 }
