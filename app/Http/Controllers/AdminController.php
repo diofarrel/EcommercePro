@@ -10,6 +10,8 @@ use App\Models\Order;
 
 use App\Models\Product;
 
+use \PDF;
+
 class AdminController extends Controller
 {
     public function view_catagory()
@@ -122,5 +124,12 @@ class AdminController extends Controller
 
         $order->save();
         return redirect()->back();
+    }
+
+    public function print_pdf($id)
+    {
+        $order = Order::find($id);
+        $pdf = PDF::loadview('admin.pdf', compact('order'));
+        return $pdf->download('order_details.pdf');
     }
 }
