@@ -64,15 +64,15 @@
                 <span class="menu-title">Catagory</span>
             </a>
         </li>
-        <!-- <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/tables/basic-table.html">
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="{{ url('orders') }}">
                 <span class="menu-icon">
                     <i class="mdi mdi-table-large"></i>
                 </span>
-                <span class="menu-title">Tables</span>
+                <span class="menu-title">Order</span>
             </a>
         </li>
-        <li class="nav-item menu-items">
+        <!-- <li class="nav-item menu-items">
             <a class="nav-link" href="pages/charts/chartjs.html">
                 <span class="menu-icon">
                     <i class="mdi mdi-chart-bar"></i>
