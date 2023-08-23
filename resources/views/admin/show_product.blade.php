@@ -44,7 +44,7 @@
                                                 <th> ID Product </th>
                                                 <th> Product Name </th>
                                                 <th> Description </th>
-                                                <th> Quantity </th>
+                                                <th> Size </th>
                                                 <th> Catagory </th>
                                                 <th> Price </th>
                                                 <th> Discount Price </th>
@@ -59,7 +59,7 @@
                                                 <td> {{ $product->id }} </td>
                                                 <td> {{ $product->title }} </td>
                                                 <td> {{ $product->description }} </td>
-                                                <td> {{ $product->quantity }} </td>
+                                                <td> {{ $product->size }} </td>
                                                 <td> {{ $product->catagory }} </td>
                                                 <td> {{ $product->price }} </td>
                                                 <td> {{ $product->discount_price }} </td>

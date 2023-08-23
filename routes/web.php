@@ -31,15 +31,15 @@ Route::get('/redirect', [HomeController::class, 'redirect']);
 
 Route::get('/view_catagory', [AdminController::class, 'view_catagory']);
 
-Route::post('/add_catagory', [AdminController::class, 'add_catagory']);
+Route::post('/add_catagory', [AdminController::class, 'add_catagory'])->middleware('usertype:1');
 
 Route::get('/delete_catagory/{id}', [AdminController::class, 'delete_catagory']);
 
-Route::get('/view_product', [AdminController::class, 'view_product']);
+Route::get('/view_product', [AdminController::class, 'view_product'])->middleware('usertype:1');
 
 Route::post('/add_product', [AdminController::class, 'add_product']);
 
-Route::get('/show_product', [AdminController::class, 'show_product']);
+Route::get('/show_product', [AdminController::class, 'show_product'])->middleware('usertype:1');
 
 Route::get('/delete_product/{id}', [AdminController::class, 'delete_product']);
 
@@ -48,10 +48,11 @@ Route::get('/update_product/{id}', [AdminController::class, 'update_product']);
 Route::post('/update_product_confirm/{id}', [AdminController::class, 'update_product_confirm']);
 
 Route::get('/orders', [AdminController::class, 'orders']);
+Route::get('/orders_detail/{id}', [AdminController::class, 'order_detail'])->name('order-detail');
 
 Route::post('/update_status_orders/{id}', [AdminController::class, 'update_status_orders']);
 
-Route::get('/print_pdf/{id}',[AdminController::class, 'print_pdf']);
+Route::get('/print_pdf/{id}', [AdminController::class, 'print_pdf']);
 
 Route::get('/product_details/{id}', [HomeController::class, 'product_details']);
 
