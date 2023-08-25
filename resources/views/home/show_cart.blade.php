@@ -32,8 +32,8 @@
           .btn-box a {
                display: inline-block;
                padding: 10px 45px;
-               background-color: #f7444e;
-               border: 1px solid #f7444e;
+               background-color: #44568b;
+               border: 1px solid #44568b;
                color: #ffffff;
                border-radius: 0;
                -webkit-transition: all 0.3s;
@@ -42,7 +42,7 @@
 
           .btn-box a:hover {
                background-color: transparent;
-               color: #f7444e;
+               color: #44568b;
           }
      </style>
 </head>
