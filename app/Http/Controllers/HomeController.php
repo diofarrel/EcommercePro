@@ -30,7 +30,8 @@ class HomeController extends Controller
     {
         $usertype = Auth::user()->usertype;
         if ($usertype == '1') {
-            return view('admin.home');
+            $product = Product::all();
+            return view('admin.show_product', compact('product'));
         } else {
             $product = Product::paginate(6);
             return view('home.userpage', compact('product'));
