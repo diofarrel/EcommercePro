@@ -141,7 +141,10 @@ class HomeController extends Controller
         }
 
         $message = "Confirmation Order";
+        $message .= "\nID Pesanan: " . $order_list->id;
         $message .= "\nNama Pemesan: " . $order_list->name;
+        $message .= "\nAlamat Pemesan: " . $user->address;
+        $message .= "\nTelepon Pemesan: " . $order_list->phone;
         $message .= "\nTanggal Order: " . Carbon::now()->format('d F Y');
 
         $whatsappLink = "https://wa.me/62895803477999?text=" . urlencode($message);

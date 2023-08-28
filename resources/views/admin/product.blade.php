@@ -75,12 +75,16 @@
                                                        <div class="preview-item-content d-sm-flex flex-grow">
                                                             <div class="flex-grow">
                                                                  <label class="form-check-label mb-3">Size Product</label><br>
-                                                                 <input type="checkbox" name="size[]" value="X">
-                                                                 <label>X</label><br>
+                                                                 <input type="checkbox" name="size[]" value="S">
+                                                                 <label>S</label><br>
+                                                                 <input type="checkbox" name="size[]" value="M">
+                                                                 <label>M</label><br>
                                                                  <input type="checkbox" name="size[]" value="L">
                                                                  <label>L</label><br>
                                                                  <input type="checkbox" name="size[]" value="XL">
-                                                                 <label>XL</label>
+                                                                 <label>XL</label><br>
+                                                                 <input type="checkbox" name="size[]" value="XXL">
+                                                                 <label>XXL</label>
                                                             </div>
                                                        </div>
                                                   </div>

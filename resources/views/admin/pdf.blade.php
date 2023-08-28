@@ -109,7 +109,7 @@
           <thead>
                <tr>
                     <th width="50%" colspan="2">
-                         <h2 class="text-start">Nama Bisnis</h2>
+                         <h2 class="text-start">CV EKA JAYA</h2>
                     </th>
                     <th width="50%" colspan="2" class="text-end company-data">
                          <span>Invoice Id: #{{ $order_list->id }}</span> <br>

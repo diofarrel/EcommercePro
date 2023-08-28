@@ -44,6 +44,23 @@
                background-color: transparent;
                color: #44568b;
           }
+
+          .btn-box2 a {
+               display: inline-block;
+               padding: 10px 45px;
+               background-color: transparent;
+               border: 1px solid #44568b;
+               color: #44568b;
+               border-radius: 0;
+               -webkit-transition: all 0.3s;
+               transition: all 0.3s;
+               margin-left: 2rem;
+          }
+
+          .btn-box2 a:hover {
+               background-color: #44568b;
+               color: #ffffff;
+          }
      </style>
 </head>
 
@@ -106,6 +123,11 @@
                                    <div class="btn-box">
                                         <a href=" {{ url('checkout') }} " class="btn1">
                                              Checkout Sekarang
+                                        </a>
+                                   </div>
+                                   <div class="btn-box2">
+                                        <a href="  " class="btn1">
+                                             Cetak Bill
                                         </a>
                                    </div>
                               </div>

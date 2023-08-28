@@ -68,7 +68,6 @@
                                              <input type="submit" value="Add to Cart" style="float: left;">
                                         </div>
                                    </form>
-                                   <!-- <a style="margin-top: 5rem;" href="">Shop Now</a> -->
                               </div>
                          </div>
                     </div>

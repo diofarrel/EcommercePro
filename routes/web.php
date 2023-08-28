@@ -48,6 +48,7 @@ Route::get('/update_product/{id}', [AdminController::class, 'update_product']);
 Route::post('/update_product_confirm/{id}', [AdminController::class, 'update_product_confirm']);
 
 Route::get('/orders', [AdminController::class, 'orders']);
+
 Route::get('/orders_detail/{id}', [AdminController::class, 'order_detail'])->name('order-detail');
 
 Route::post('/update_status_orders/{id}', [AdminController::class, 'update_status_orders']);
