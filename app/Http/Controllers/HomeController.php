@@ -74,7 +74,7 @@ class HomeController extends Controller
             $cart->size = $request->size;
             $cart->save();
 
-            return redirect()->back();
+            return redirect()->back()->with('message', 'Product Added Successfully');
         } else {
             return redirect('login');
         }
@@ -143,15 +143,14 @@ class HomeController extends Controller
         }
 
         $message = "Confirmation Order";
-        $message .= "\nID Pesanan: " . $order_list->id;
+        $message .= "\nID Pesanan: #" . $order_list->id;
         $message .= "\nNama Pemesan: " . $order_list->name;
         $message .= "\nAlamat Pemesan: " . $user->address;
         $message .= "\nTelepon Pemesan: " . $order_list->phone;
         $message .= "\nTanggal Order: " . Carbon::now()->format('d F Y');
 
         $whatsappLink = "https://wa.me/62895803477999?text=" . urlencode($message);
-
-        return redirect($whatsappLink);
+        return redirect($whatsappLink)->with('message', 'Berhasil melakukan checkout, untuk memeriksa silahkan cek halaman Order!');
     }
 
     public function productpage()

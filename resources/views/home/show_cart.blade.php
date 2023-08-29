@@ -21,7 +21,6 @@
      <link href="home/css/style.css" rel="stylesheet" />
      <!-- responsive style -->
      <link href="home/css/responsive.css" rel="stylesheet" />
-
      <style>
           .img-size {
                width: 200px !important;
@@ -71,10 +70,10 @@
           <!-- end header section -->
 
           @if (session()->has('message'))
-               <div class="alert alert-success">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
-                    {{ session()->get('message') }}
-               </div>
+          <div class="alert alert-success">
+               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+               {{ session()->get('message') }}
+          </div>
           @endif
 
           <div class="table-responsive" style="margin:auto; width:80%;">
@@ -91,21 +90,21 @@
                     </thead>
                     <?php $totalprice = 0; ?>
                     @foreach ($cart as $cart)
-                         <tbody>
-                              <tr>
-                                   <td> {{ $cart->product_title }} </td>
-                                   <td> {{ $cart->size }}</td>
-                                   <td> {{ $cart->quantity }} </td>
-                                   <td> {{ $cart->price }} </td>
-                                   <td>
-                                        <img class="img-fluid img-thumbnail img-size" src="/product/{{ $cart->image }}" alt="">
-                                   </td>
-                                   <td>
-                                        <a onclick="return confirm('Are you sure to delete this?')" class="btn btn-danger" href="{{ url('/remove_cart', $cart->id) }}">Delete Item</a>
-                                   </td>
-                              </tr>
-                         </tbody>
-                         <?php $totalprice = $totalprice + $cart->price; ?>
+                    <tbody>
+                         <tr>
+                              <td> {{ $cart->product_title }} </td>
+                              <td> {{ $cart->size }}</td>
+                              <td> {{ $cart->quantity }} </td>
+                              <td> {{ $cart->price }} </td>
+                              <td>
+                                   <img class="img-fluid img-thumbnail img-size" src="/product/{{ $cart->image }}" alt="">
+                              </td>
+                              <td>
+                                   <a onclick="return confirm('Are you sure to delete this?')" class="btn btn-danger" href="{{ url('/remove_cart', $cart->id) }}">Delete Item</a>
+                              </td>
+                         </tr>
+                    </tbody>
+                    <?php $totalprice = $totalprice + $cart->price; ?>
                     @endforeach
                </table>
 
@@ -121,26 +120,24 @@
                               </div>
                               <div class="field" style="margin-bottom: 5rem; float: left">
                                    <div class="btn-box">
-                                        <a href=" {{ url('checkout') }} " class="btn1">
+                                        <a target="_blank" href=" {{ url('checkout')}} "> 
                                              Checkout Sekarang
                                         </a>
                                    </div>
                               </div>
                          </fieldset>
                     </form>
+                    <p> 
+                         Perhatian! <br>
+                         Silahkan refresh halaman ini setelah muncul halaman whatsapp!
+                    </p>
                </div>
           </div>
 
           <!-- footer start -->
           @include('home.footer')
           <!-- footer end -->
-          <div class="cpy_">
-               <p class="mx-auto">© 2021 All Rights Reserved By <a href="https://html.design/">Free Html Templates</a><br>
 
-                    Distributed By <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
-
-               </p>
-          </div>
           <!-- jQery -->
           <script src="home/js/jquery-3.4.1.min.js"></script>
           <!-- popper js -->

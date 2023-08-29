@@ -30,6 +30,14 @@
           <!-- header section strats -->
           @include('home.header')
           <!-- end header section -->
+
+          @if (session()->has('message'))
+          <div class="alert alert-success">
+               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+               {{ session()->get('message') }}
+          </div>
+          @endif
+          
           <section style="margin-top: 5rem; background-color: #fff;" class="arrival_section">
                <div class="container">
                     <div class="box">

@@ -38,6 +38,8 @@
                         <th> Nama Pemesan </th>
                         <th> Total Harga </th>
                         <th> Address </th>
+                        <th> Status Pengiriman </th>
+                        <th> Status Pembayaran </th>
                         <th> Action </th>
                     </tr>
                 </thead>
@@ -49,6 +51,8 @@
                         <td> {{ $order->name }}</td>
                         <td> {{ $order->total_price }}</td>
                         <td> {{ $order->address }} </td>
+                        <td> {{ $order->delivery_status }} </td>
+                        <td> {{ $order->payment_status }} </td>
                         <td>
                             <a class="btn btn-primary" href="{{ url('myorder_detail', $order->id) }}">Detail</a>
                             <a class="btn btn-danger" href="{{ url('print_bill', $order->id) }}">Print Bill</a>
