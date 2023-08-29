@@ -18,6 +18,8 @@ use App\Models\order_list;
 
 use Carbon\Carbon;
 
+use \PDF;
+
 class HomeController extends Controller
 {
     function index()
@@ -156,5 +158,31 @@ class HomeController extends Controller
     {
         $product = Product::paginate(6);
         return view('home.productpage', compact('product'));
+    }
+
+    public function myorder()
+    {
+        if (Auth::id()) {
+            $id = Auth::user()->id;
+            $order = order_list::where('user_id', '=', $id)->get();
+
+            return view('home.myorder', compact('order'));
+        } else {
+            return redirect('login');
+        }
+    }
+
+    public function myorder_detail($id)
+    {
+        $orders = Order::where('id_order_list', $id)->get();
+        return view('home.myorder_detail', compact('orders'));
+    }
+
+    public function print_bill($id)
+    {
+        $order_list = order_list::find($id);
+        $order = Order::where('id_order_list', $order_list->id)->get();
+        $pdf = PDF::loadview('admin.pdf', compact('order_list', 'order'));
+        return $pdf->download('order_details.pdf');
     }
 }

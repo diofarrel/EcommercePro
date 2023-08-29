@@ -2,11 +2,6 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
             <a class="navbar-brand" href="index.html"><img width="50" src="images/logo.png" alt="#" /></a>
-            <!-- <a class="nav-item" href="{{url('/')}}">
-                <form method="" action="">
-                    <input class="" type="submit" value="CV EKA JAYA">
-                </form>
-            </a> -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class=""> </span>
             </button>
@@ -21,24 +16,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('show_cart') }}">Cart</a>
                     </li>
-                    <!-- <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Pages <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="testimonial.html">Testimonial</a></li>
-                        </ul>
-                    </li> -->
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="blog_list.html">Blog</a>
-                    </li> -->
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li> -->
-                    <!-- <form class="form-inline">
-                        <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                        </button>
-                    </form> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('myorder') }}">Order</a>
+                    </li>
 
                     @if (Route::has('login'))
                     @auth

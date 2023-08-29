@@ -11,8 +11,8 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <link rel="shortcut icon" href="images/favicon.png" type="">
-    <title>Famms - Fashion HTML Template</title>
+    <link rel="shortcut icon" href="images/logo.png" type="">
+    <title>EKA JAYA</title>
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="home/css/bootstrap.css" />
     <!-- font awesome style -->
@@ -75,11 +75,6 @@
                 <span style="padding: 25px;">
                     {!!$product->links()!!}
                 </span>
-                <!-- <div class="btn-box">
-            <a href="">
-                View All products
-            </a>
-        </div> -->
             </div>
         </section>
 
@@ -87,17 +82,6 @@
         <!-- footer start -->
         @include('home.footer')
         <!-- footer end -->
-        <div class="cpy_">
-            <p class="mx-auto">© 2023 All Rights Reserved By <a href="{{url('/')}}">CV EKA JAYA</a><br></p>
-        </div>
-        <!-- jQery -->
-        <script src="home/js/jquery-3.4.1.min.js"></script>
-        <!-- popper js -->
-        <script src="home/js/popper.min.js"></script>
-        <!-- bootstrap js -->
-        <script src="home/js/bootstrap.js"></script>
-        <!-- custom js -->
-        <script src="home/js/custom.js"></script>
 </body>
 
 </html>

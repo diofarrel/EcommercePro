@@ -125,11 +125,6 @@
                                              Checkout Sekarang
                                         </a>
                                    </div>
-                                   <div class="btn-box2">
-                                        <a href="  " class="btn1">
-                                             Cetak Bill
-                                        </a>
-                                   </div>
                               </div>
                          </fieldset>
                     </form>

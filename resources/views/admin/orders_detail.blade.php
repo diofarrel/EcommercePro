@@ -34,11 +34,11 @@
                                                   <thead>
                                                        <tr>
                                                             <th> Cust. Name </th>
-                                                            <th>Email</th>
+                                                            <th> Email </th>
                                                             <th> Phone </th>
                                                             <th> Address </th>
                                                             <th> Product Title </th>
-                                                            <th>Product Image</th>
+                                                            <th> Product Image </th>
                                                             <th> Quantity </th>
                                                             <th> Price </th>
                                                        </tr>

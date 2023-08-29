@@ -66,3 +66,9 @@ Route::get('/remove_cart/{id}', [HomeController::class, 'remove_cart']);
 Route::get('/checkout', [HomeController::class, 'checkout']);
 
 Route::get('/productpage', [HomeController::class, 'productpage']);
+
+Route::get('/myorder', [HomeController::class, 'myorder']);
+
+Route::get('/myorder_detail/{id}', [HomeController::class, 'myorder_detail']);
+
+Route::get('/print_bill/{id}', [HomeController::class, 'print_bill']);
