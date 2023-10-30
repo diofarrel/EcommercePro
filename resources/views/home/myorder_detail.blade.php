@@ -21,7 +21,7 @@
     <link href="{{ asset('home/css/style.css') }}" rel="stylesheet" />
     <!-- responsive style -->
     <link href="{{ asset('home/css/responsive.css') }}" rel="stylesheet" />
-    
+
     <style>
         .img-size {
             width: 200px !important;
@@ -37,7 +37,9 @@
         <header class="header_section">
             <div class="container">
                 <nav class="navbar navbar-expand-lg custom_nav-container ">
-                    <a class="navbar-brand" href="{{ ('/') }}"><img width="50" src="{{asset('images/logo.png')}}" alt="#" /></a>
+                    <a class="navbar-brand" href="{{url('/')}}">
+                        <span>CV EKA JAYA TEKSTIL</span>
+                    </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class=""> </span>
                     </button>
@@ -127,9 +129,8 @@
                                 <a href="{{url('/')}}"><img width="100" src="{{asset('images/logo.png')}}" alt="#" /></a>
                             </div>
                             <div class="information_f">
-                                <p><strong>ADDRESS:</strong> your address here!</p>
-                                <p><strong>TELEPHONE:</strong> your phone here!</p>
-                                <p><strong>EMAIL:</strong> yourmain@gmail.com</p>
+                                <p><strong>TELEPHONE:</strong> 0895803477999</p>
+                                <p><strong>EMAIL:</strong> cvekajaya.web@gmail.com</p>
                             </div>
                         </div>
                     </div>

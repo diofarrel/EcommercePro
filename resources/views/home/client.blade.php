@@ -2,88 +2,35 @@
     <div class="container">
         <div class="heading_container heading_center">
             <h2>
-                Customer's Testimonial
+                Testimoni Perusahaan
             </h2>
         </div>
-        <div id="carouselExample3Controls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="box col-lg-10 mx-auto">
-                        <div class="img_container">
-                            <div class="img-box">
-                                <div class="img_box-inner">
-                                    <img src="images/client.jpg" alt="">
-                                </div>
+
+        <div class="row">
+            @foreach($perusahaan as $data)
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="box col-lg-10 mx-auto">
+                    <div class="img_container">
+                        <div class="img-box">
+                            <div class="img_box-inner">
+                                <img src="perusahaan/{{ $data->image }}" alt="">
                             </div>
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                Anna Trevor
-                            </h5>
-                            <h6>
-                                Customer
-                            </h6>
-                            <p>
-                                Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat.
-                            </p>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="box col-lg-10 mx-auto">
-                        <div class="img_container">
-                            <div class="img-box">
-                                <div class="img_box-inner">
-                                    <img src="images/client.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                Anna Trevor
-                            </h5>
-                            <h6>
-                                Customer
-                            </h6>
-                            <p>
-                                Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="box col-lg-10 mx-auto">
-                        <div class="img_container">
-                            <div class="img-box">
-                                <div class="img_box-inner">
-                                    <img src="images/client.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                Anna Trevor
-                            </h5>
-                            <h6>
-                                Customer
-                            </h6>
-                            <p>
-                                Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat.
-                            </p>
-                        </div>
+                    <div class="detail-box">
+                        <h5>
+                            {{ $data->title_perusahaan }}
+                        </h5>
                     </div>
                 </div>
             </div>
-            <div class="carousel_btn_box">
-                <a class="carousel-control-prev" href="#carouselExample3Controls" role="button" data-slide="prev">
-                    <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExample3Controls" role="button" data-slide="next">
-                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
+            @endforeach
+        </div>
+
+        <div class="row">
+            <span class="mt-5" style="margin:auto">
+                {!!$perusahaan->links()!!}
+            </span>
         </div>
     </div>
 </section>

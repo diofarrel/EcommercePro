@@ -35,6 +35,10 @@
         @include('home.product')
       <!-- end product section -->
 
+      <!-- client section -->
+        @include('home.client')
+      <!-- end client section -->
+
       <!-- footer start -->
         @include('home.footer')
       <!-- footer end -->

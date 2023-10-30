@@ -55,6 +55,20 @@ Route::post('/update_status_orders/{id}', [AdminController::class, 'update_statu
 
 Route::get('/print_pdf/{id}', [AdminController::class, 'print_pdf']);
 
+Route::get('/view_perusahaan', [AdminController::class, 'view_perusahaan'])->middleware('usertype:1');
+
+Route::post('/add_perusahaan', [AdminController::class, 'add_perusahaan']);
+
+Route::get('/show_perusahaan', [AdminController::class, 'show_perusahaan'])->middleware('usertype:1');
+
+Route::get('/delete_perusahaan/{id}', [AdminController::class, 'delete_perusahaan']);
+
+Route::get('/update_perusahaan/{id}', [AdminController::class, 'update_perusahaan']);
+
+Route::post('/update_perusahaan_confirm/{id}', [AdminController::class, 'update_perusahaan_confirm']);
+
+// HOME
+
 Route::get('/product_details/{id}', [HomeController::class, 'product_details']);
 
 Route::post('/add_cart/{id}', [HomeController::class, 'add_cart']);

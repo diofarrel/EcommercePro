@@ -4,12 +4,11 @@
             <div class="col-md-4">
                 <div class="full">
                     <div class="logo_footer">
-                        <a href="{{url('/')}}"><img width="100" src="images/logo.png" alt="#" /></a>
+                        <a href="{{url('/')}}"><img width="250" src="images/logo.png" alt="#" /></a>
                     </div>
                     <div class="information_f">
-                        <p><strong>ADDRESS:</strong> your address here!</p>
-                        <p><strong>TELEPHONE:</strong> your phone here!</p>
-                        <p><strong>EMAIL:</strong> yourmain@gmail.com</p>
+                        <p><strong>TELEPHONE:</strong> 081235621208</p>
+                        <p><strong>EMAIL:</strong> cvekajaya.web@gmail.com</p>
                     </div>
                 </div>
             </div>

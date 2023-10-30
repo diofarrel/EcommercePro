@@ -129,7 +129,7 @@
                     </form>
                     <p> 
                          Perhatian! <br>
-                         Silahkan refresh halaman ini setelah muncul halaman whatsapp!
+                         Silahkan refresh halaman ini setelah muncul halaman whatsapp dan silahkan melakukan konfirmasi kepada ADMIN melalui WHATSAPP!
                     </p>
                </div>
           </div>

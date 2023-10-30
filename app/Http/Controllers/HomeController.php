@@ -16,16 +16,19 @@ use App\Models\Order;
 
 use App\Models\order_list;
 
+use App\Models\Perusahaan;
+
 use Carbon\Carbon;
 
 use \PDF;
 
 class HomeController extends Controller
 {
-    function index()
+    public function index()
     {
         $product = Product::paginate(6);
-        return view('home.userpage', compact('product'));
+        $perusahaan = Perusahaan::paginate(3);
+        return view('home.userpage', compact('product', 'perusahaan'));
     }
 
     public function redirect()
@@ -36,7 +39,8 @@ class HomeController extends Controller
             return view('admin.show_product', compact('product'));
         } else {
             $product = Product::paginate(6);
-            return view('home.userpage', compact('product'));
+            $perusahaan = Perusahaan::paginate(3);
+            return view('home.userpage', compact('product', 'perusahaan'));
         }
     }
 

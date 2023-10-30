@@ -40,10 +40,5 @@
         <span style="padding: 25px;">
             {!!$product->links()!!}
         </span>
-        <!-- <div class="btn-box">
-            <a href="">
-                View All products
-            </a>
-        </div> -->
     </div>
 </section>

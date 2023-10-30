@@ -9,6 +9,7 @@ use App\Models\Catagory;
 use App\Models\Order;
 use App\Models\order_list;
 use App\Models\Product;
+use App\Models\Perusahaan;
 
 use \PDF;
 
@@ -109,6 +110,41 @@ class AdminController extends Controller
         $product->save();
 
         return redirect()->back()->with('message', 'Product Updated Successfully');
+    }
+
+    public function view_perusahaan()
+    {
+        return view('admin.perusahaan');
+    }
+
+    public function add_perusahaan(Request $request)
+    {
+        $perusahaan = new perusahaan();
+
+        $perusahaan->title_perusahaan = $request->title;
+
+        $image = $request->image;
+        $imagename = time() . '.' . $image->getClientOriginalExtension();
+        $request->image->move('perusahaan', $imagename);
+        $perusahaan->image = $imagename;
+
+        $perusahaan->save();
+
+        return redirect()->back()->with('message', 'Testimoni Added Successfully');
+    }
+
+    public function show_perusahaan()
+    {
+        $perusahaan = Perusahaan::all();
+        return view('admin.show_perusahaan', compact('perusahaan'));
+    }
+
+    public function delete_perusahaan($id)
+    {
+        $perusahaan = Perusahaan::find($id);
+        $perusahaan->delete();
+
+        return redirect()->back()->with('message', 'Testimoni Deleted Successfully');
     }
 
     public function orders()
